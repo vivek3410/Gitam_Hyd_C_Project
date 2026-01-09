@@ -1,7 +1,7 @@
 #include<stdio.h>
 
 int main(){
-    int arr[100][100];
+    int arr[10][10];
     int row,col;
     printf("Enter the row: ");
     scanf("%d",&row);
@@ -11,16 +11,15 @@ int main(){
 
     for(int i = 0;i<row;i++){
         for(int j = 0;j<col;j++){
-
             printf("Enter the element at postion %d, %d",(i+1),(j+1));
             scanf("%d",&arr[i][j]);
         }
     }
 
-    for(int i = 0;i<row;i++){
-        for(int j = 0;j<col;j++){
-            printf("%d ",arr[i][j]);
-        }
-        printf("\n");
-    }
+    int i = 1,j = 1;
+
+    int offset = i * row + j;
+
+    printf("%d\n",offset);
+
 }
